@@ -1,0 +1,11 @@
+img {
+  float: left;
+  width: 30%;
+}
+
+@media (max-width: 1000px) {
+  img {
+    float: top;
+    width: 100%;
+  }
+}

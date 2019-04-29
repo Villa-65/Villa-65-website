@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PEOPLE } from '../people';
+import {Person} from '../person';
 
 @Component({
   selector: 'app-people',
@@ -14,4 +15,7 @@ export class PeopleComponent implements OnInit {
   ngOnInit() {
   }
 
+  public getBlurb(person: Person) {
+    return person.story.slice(0, 50) + '...';
+  }
 }
