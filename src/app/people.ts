@@ -10,7 +10,7 @@ export const PEOPLE: Person[] = [
   { id: 6, name: 'Thomas', story: 'Ik ben Thomas', image: '/people/Thomas.png'},
   { id: 7, name: 'Jari', story: 'Ik ben Jari', image: '/people/Jari.png'},
   { id: 8, name: '-Leeg-', story: 'Ik ben -Leeg-', image: '/people/-Leeg-.png'},
-  { id: 9, name: 'Luc', story: 'Ik ben Luc', image: '/people/Luc.png'},
+  { id: 9, name: 'Luc', story: 'Hoi, ik ben Luc, de huis-ICT\'er. Ik hou de website en de huiscomputer in de gaten en af en toe maak ik wat leuks, zoals de bierstrepen-applicatie die op de huisPC draait.', image: '/people/Luc.png'},
   { id: 10, name: 'Quintus', story: 'Ik ben Quintus', image: '/people/Quintus.png'},
   { id: 11, name: '-Leeg-', story: 'Ik ben -Leeg-', image: '/people/-Leeg-.png'},
   { id: 12, name: 'Matthijs', story: 'Ik ben Matthijs', image: '/people/Matthijs.png'},
