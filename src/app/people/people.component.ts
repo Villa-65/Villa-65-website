@@ -16,6 +16,11 @@ export class PeopleComponent implements OnInit {
   }
 
   public getBlurb(person: Person) {
-    return person.story.slice(0, 50) + '...';
+    const blurb = person.story.slice(0, 50);
+    if (blurb === person.story) {
+      return blurb;
+    } else {
+      return blurb + '...';
+    }
   }
 }
