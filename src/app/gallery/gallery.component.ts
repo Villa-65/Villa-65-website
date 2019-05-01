@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Location} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
@@ -24,11 +24,11 @@ export class GalleryComponent implements OnInit {
     this.path = '/events/trips/' + eventName;
   }
 
-  private getFiles() {
-    const fs = require('fs');
-    fs.readdirSync(this.path).forEach(file => {this.files.push(file);
-    });
-  }
+  // private getFiles() {
+  //   const fs = require('fs');
+  //   fs.readdirSync(this.path).forEach(file => {this.files.push(file);
+  //   });
+  // }
 
   private goBack() {
     this.location.back();
