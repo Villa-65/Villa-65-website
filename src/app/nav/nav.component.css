@@ -5,3 +5,8 @@ nav {
 .navbar .navbar-nav .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler .navbar-toggler-icon {
   color: #d0ab29;
 }
+
+.navbar .navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
+}
