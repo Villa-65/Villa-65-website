@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PEOPLE } from '../people';
+import {Component, OnInit} from '@angular/core';
+import {PEOPLE} from '../people';
 import {Person} from '../person';
 
 @Component({
@@ -10,7 +10,8 @@ import {Person} from '../person';
 export class PeopleComponent implements OnInit {
   people = PEOPLE;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

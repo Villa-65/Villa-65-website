@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-gallery',
@@ -15,11 +15,13 @@ export class GalleryComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private location: Location
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.getPaths();
   }
+
   private getPaths() {
     this.eventName = this.route.snapshot.paramMap.get('event');
     this.path = '/events/trips/' + this.eventName;
