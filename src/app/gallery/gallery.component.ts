@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 export class GalleryComponent implements OnInit {
   path: string;
   files: string[];
+  eventName: string;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,8 +21,8 @@ export class GalleryComponent implements OnInit {
     this.getPaths();
   }
   private getPaths() {
-    const eventName = this.route.snapshot.paramMap.get('event');
-    this.path = '/events/trips/' + eventName;
+    this.eventName = this.route.snapshot.paramMap.get('event');
+    this.path = '/events/trips/' + this.eventName;
   }
 
   // private getFiles() {
