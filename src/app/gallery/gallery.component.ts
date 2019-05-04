@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
+import {GalleryService} from "../gallery.service";
 
 @Component({
   selector: 'app-gallery',
@@ -14,24 +15,27 @@ export class GalleryComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private galleryService: GalleryService
   ) {
   }
 
   ngOnInit() {
     this.getPaths();
+    this.getFiles();
+    console.log(this.files);
+  }
+
+  private getFiles() {
+    this.galleryService.getFiles(this.path).subscribe(files => {
+      this.files = files;
+    });
   }
 
   private getPaths() {
     this.eventName = this.route.snapshot.paramMap.get('event');
-    this.path = '/events/trips/' + this.eventName;
+    this.path = 'events/trips/' + this.eventName;
   }
-
-  // private getFiles() {
-  //   const fs = require('fs');
-  //   fs.readdirSync(this.path).forEach(file => {this.files.push(file);
-  //   });
-  // }
 
   private goBack() {
     this.location.back();

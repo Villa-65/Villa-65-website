@@ -9,6 +9,8 @@ import {PeopleComponent} from './people/people.component';
 import {EventsComponent} from './events/events.component';
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import {GalleryComponent} from './gallery/gallery.component';
+import {HttpClientModule} from "@angular/common/http";
+import { PictureComponent } from './picture/picture.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import {GalleryComponent} from './gallery/gallery.component';
     PeopleComponent,
     EventsComponent,
     PersonDetailsComponent,
-    GalleryComponent
+    GalleryComponent,
+    PictureComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
