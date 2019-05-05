@@ -10,8 +10,10 @@ export class GalleryService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
   getFiles(path: string): Observable<string[]> {
     return this.http.get<string[]>(this.PHPfile + path);
+  }
 }

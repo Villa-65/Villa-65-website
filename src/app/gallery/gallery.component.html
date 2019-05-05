@@ -1,3 +1,8 @@
-<p>
+<p id="event">
   {{eventName}}
 </p>
+<div id="pictures">
+  <li *ngFor="let file of files">
+    <img [src]="file">
+  </li>
+</div>
