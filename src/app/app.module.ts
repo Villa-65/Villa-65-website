@@ -27,7 +27,7 @@ import { PictureComponent } from './picture/picture.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
