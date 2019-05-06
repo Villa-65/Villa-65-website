@@ -9,8 +9,7 @@ import {PeopleComponent} from './people/people.component';
 import {EventsComponent} from './events/events.component';
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import {GalleryComponent} from './gallery/gallery.component';
-import {HttpClientModule} from "@angular/common/http";
-import { PictureComponent } from './picture/picture.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { PictureComponent } from './picture/picture.component';
     PeopleComponent,
     EventsComponent,
     PersonDetailsComponent,
-    GalleryComponent,
-    PictureComponent
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
