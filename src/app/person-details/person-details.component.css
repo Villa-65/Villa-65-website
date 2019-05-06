@@ -4,7 +4,7 @@ img {
   margin-right: 1em;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 750px) {
   img {
     float: top;
     width: 100%;
