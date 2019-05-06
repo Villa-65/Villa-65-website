@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Location} from '@angular/common';
+import {Component, OnInit, Inject} from '@angular/core';
+import {Location, DOCUMENT} from '@angular/common';
 import {ActivatedRoute} from '@angular/router';
 import {PEOPLE} from '../people';
 import {Person} from '../person';
@@ -14,12 +14,14 @@ export class PersonDetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    @Inject(DOCUMENT) private document: Document
   ) {
   }
 
   ngOnInit() {
     this.getPerson();
+    this.document.body.scrollTop = 0;
   }
 
   private getPerson() {
