@@ -2,11 +2,16 @@ nav {
   background-color: #1d4f14;
 }
 
-.navbar .navbar-nav .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler .navbar-toggler-icon {
+.navbar .navbar-nav .nav-link, .navbar .navbar-brand, .navbar .navbar-toggler .navbar-toggler-icon, .navbar-text {
   color: #d0ab29;
 }
 
 .navbar .navbar-brand {
   font-family: 'Dancing Script', cursive;
   font-size: 1.5em;
+}
+
+.navbar-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4em;
 }
