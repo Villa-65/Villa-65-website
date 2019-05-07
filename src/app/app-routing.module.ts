@@ -5,14 +5,16 @@ import {PeopleComponent} from './people/people.component';
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import {EventsComponent} from './events/events.component';
 import {GalleryComponent} from './gallery/gallery.component';
+import {TextpageComponent} from './textpage/textpage.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
   {path: 'people', component: PeopleComponent},
-  {path: 'events', component: EventsComponent},
   {path: 'person/:name', component: PersonDetailsComponent},
-  {path: 'events/:event', component: GalleryComponent}
+  {path: 'events', component: EventsComponent},
+  {path: 'events/:event', component: GalleryComponent},
+  {path: 'media/:item', component: TextpageComponent}
 ];
 
 @NgModule({

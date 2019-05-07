@@ -1,8 +1,23 @@
-.carousel-inner {
+.carousel {
   width: 100%;
-  height: 500px !important;
+  height: 675px;
+}
+
+@media (max-width: 1365px) {
+  .carousel {
+    height: 50vw;
+  }
 }
 
 .h1 {
+  color: #d0ab29;
+}
+
+#list {
+  font-size: 1.3em;
+  color: #d0ab29;
+}
+
+a {
   color: #d0ab29;
 }
