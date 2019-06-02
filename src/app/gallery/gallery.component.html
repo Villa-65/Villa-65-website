@@ -2,7 +2,11 @@
   {{eventName}}
 </p>
 <div id="pictures">
-  <li *ngFor="let file of files">
-    <img src="thumb.php?image={{file}}">
-  </li>
+  <ul>
+    <li *ngFor="let file of files">
+      <a [href]="file">
+        <img src="thumb.php?image={{file}}">
+      </a>
+    </li>
+  </ul>
 </div>

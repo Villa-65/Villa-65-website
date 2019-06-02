@@ -47,13 +47,7 @@
     </li>
     <li>Evenementen
       <ul>
-        <li><a routerLink="/events/Schittermagisch">Flatfeest Schittermagisch</a></li>
-        <li><a routerLink="/events/Royaalterminaal">Flatfeest Royaalterminaal</a></li>
-        <li><a routerLink="/events/Bata17">Bata 2017</a></li>
-        <li><a routerLink="/events/Beerpong15">Beerpongtoernooi 2015</a></li>
-        <li><a routerLink="/events/Lowlands17">Lowlands 2017</a></li>
-        <li><a routerLink="/events/Kerstdiner15">Kerstdiner 2015</a></li>
-        <li><a routerLink="/events/Kerstdiner18">Kerstdiner 2018</a></li>
+        <li *ngFor="let trip of tripsFiles"><a routerLink="{{getLink(trip)}}">{{pathToName(trip)}}</a></li>
       </ul>
     </li>
   </ul>

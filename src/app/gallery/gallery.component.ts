@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
-import {GalleryService} from "../gallery.service";
+import {GalleryService} from '../gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -23,7 +23,7 @@ export class GalleryComponent implements OnInit {
   ngOnInit() {
     this.getPaths();
     this.getFiles();
-    this.fixName();
+    // this.fixName();
   }
 
   private getFiles() {
@@ -35,6 +35,7 @@ export class GalleryComponent implements OnInit {
   private getPaths() {
     this.eventName = this.route.snapshot.paramMap.get('event');
     this.path = 'events/trips/' + this.eventName;
+    this.fixName();
   }
 
   private goBack() {
@@ -42,15 +43,15 @@ export class GalleryComponent implements OnInit {
   }
 
   private fixName() {
-    var res: string = "";
-    var temp: string = this.eventName;
-    //If there is a number, i.e. year, in the filename, insert a space and append 20 to the beginning.
-    if (temp.search("\\d") != -1) {
-      res += temp.slice(0, temp.search("\\d")) + " 20" + temp.slice(temp.search("\\d"), temp.length);
+    let res = '';
+    const temp: string = this.eventName;
+    // If there is a number, i.e. year, in the filename, insert a space and append 20 to the beginning.
+    if (temp.search('\\d') !== -1) {
+      res += temp.slice(0, temp.search('\\d')) + ' 20' + temp.slice(temp.search('\\d'), temp.length);
     } else {
       res = temp;
     }
-    res = res.replace(res[0], res[0].toUpperCase);
+    res = res.replace(res[0], res[0].toUpperCase());
     this.eventName = res;
   }
 }
