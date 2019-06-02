@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {PEOPLE} from '../people';
 import {Person} from '../person';
+import {PeopleService} from '../people.service';
 
 @Component({
   selector: 'app-people',
@@ -8,12 +8,17 @@ import {Person} from '../person';
   styleUrls: ['./people.component.css']
 })
 export class PeopleComponent implements OnInit {
-  people = PEOPLE;
+  people: Person[];
 
-  constructor() {
+  constructor(
+    private service: PeopleService
+  ) {
   }
 
   ngOnInit() {
+    this.service.getPeople().subscribe(people => {
+      this.people = people;
+    });
   }
 
   public getBlurb(person: Person) {

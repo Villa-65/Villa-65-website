@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
-import {Observable, of} from "rxjs";
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GalleryService {
-  private PHPfile: string = "getFiles.php?f=";
+  private PHPfile = 'getFiles.php?f=';
 
   constructor(
     private http: HttpClient
