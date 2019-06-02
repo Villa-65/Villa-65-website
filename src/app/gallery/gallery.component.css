@@ -3,3 +3,12 @@
   font-size: 3em;
   font-family: "Dancing Script", serif;
 }
+
+#pictures {
+  display: table;
+}
+
+#pictures img {
+  width: 200px;
+  height: 200px;
+}

@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'person/:name', component: PersonDetailsComponent},
   {path: 'events', component: EventsComponent},
   {path: 'events/:event', component: GalleryComponent},
-  {path: 'media/:item', component: TextpageComponent}
+  {path: 'text/:item', component: TextpageComponent}
 ];
 
 @NgModule({
