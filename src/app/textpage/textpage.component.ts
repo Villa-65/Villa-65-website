@@ -19,9 +19,13 @@ export class TextpageComponent implements OnInit {
   ngOnInit(
   ) {
     this.item = this.route.snapshot.paramMap.get('item');
-    this.service.getText(this.item).subscribe(content => {
-      this.content = content;
+    this.service.getText().subscribe(content => {
+      const self = this;
+      content.forEach(function(element) {
+        if (element.title === self.item) {
+          self.content = element.content;
+        }
+      });
     });
   }
-
 }
