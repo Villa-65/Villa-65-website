@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {TextService} from "../text.service";
+import {ActivatedRoute} from '@angular/router';
+import {TextService} from '../text.service';
 
 @Component({
   selector: 'app-textpage',

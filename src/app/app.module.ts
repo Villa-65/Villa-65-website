@@ -10,7 +10,7 @@ import {EventsComponent} from './events/events.component';
 import {PersonDetailsComponent} from './person-details/person-details.component';
 import {GalleryComponent} from './gallery/gallery.component';
 import {HttpClientModule} from '@angular/common/http';
-import { TextpageComponent } from './textpage/textpage.component';
+import {TextpageComponent} from './textpage/textpage.component';
 
 @NgModule({
   declarations: [
