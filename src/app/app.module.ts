@@ -11,7 +11,6 @@ import {PersonDetailsComponent} from './person-details/person-details.component'
 import {GalleryComponent} from './gallery/gallery.component';
 import {HttpClientModule} from '@angular/common/http';
 import { TextpageComponent } from './textpage/textpage.component';
-import {PictureComponent} from "./picture/picture.component";
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import {PictureComponent} from "./picture/picture.component";
     EventsComponent,
     PersonDetailsComponent,
     GalleryComponent,
-    TextpageComponent,
-    PictureComponent
+    TextpageComponent
   ],
   imports: [
     BrowserModule,
