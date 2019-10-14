@@ -21,3 +21,7 @@
 a {
   color: #d0ab29;
 }
+
+.carousel-inner {
+  max-height: 675px;
+}
