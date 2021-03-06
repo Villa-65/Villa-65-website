@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {Location} from '@angular/common';
-import {GalleryService} from '../gallery.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { GalleryService } from '../gallery.service';
 
 @Component({
   selector: 'app-gallery',
@@ -36,10 +36,6 @@ export class GalleryComponent implements OnInit {
     this.eventName = this.route.snapshot.paramMap.get('event');
     this.path = 'events/trips/' + this.eventName;
     this.fixName();
-  }
-
-  private goBack() {
-    this.location.back();
   }
 
   private fixName() {

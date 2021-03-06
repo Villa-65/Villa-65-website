@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
 import { TextpageComponent } from './textpage.component';
 
 describe('TextpageComponent', () => {

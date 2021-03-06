@@ -1,8 +1,8 @@
-import {Component, OnInit, Inject} from '@angular/core';
-import {Location, DOCUMENT} from '@angular/common';
-import {ActivatedRoute} from '@angular/router';
-import {PEOPLE} from '../people';
-import {Person} from '../person';
+import { Component, OnInit, Inject } from '@angular/core';
+import { Location, DOCUMENT } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { PEOPLE } from '../people';
+import { Person } from '../person';
 
 @Component({
   selector: 'app-person-details',
@@ -27,9 +27,5 @@ export class PersonDetailsComponent implements OnInit {
   private getPerson() {
     const personName = this.route.snapshot.paramMap.get('name');
     this.person = PEOPLE.find(person => person.name === personName);
-  }
-
-  private goBack() {
-    this.location.back();
   }
 }
