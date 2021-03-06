@@ -20,6 +20,6 @@ export class TextService {
    * Get text associated with the parameter.
    */
   public getText(): Observable<Text[]> {
-    return this.http.get<Text[]>('text.JSON');
+    return this.http.get<Text[]>('https://villa65.nl/text.JSON');
   }
 }

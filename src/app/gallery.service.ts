@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class GalleryService {
-  private PHPfile = 'getFiles.php?f=';
+  private PHPfile = 'https://villa65.nl/getFiles.php?f=';
 
   constructor(
     private http: HttpClient

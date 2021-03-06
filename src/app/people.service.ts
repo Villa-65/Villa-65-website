@@ -14,6 +14,6 @@ export class PeopleService {
   }
 
   getPeople(): Observable<Person[]> {
-    return this.http.get<Person[]>('people.JSON');
+    return this.http.get<Person[]>('https://villa65.nl/people.JSON');
   }
 }
