@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {TextService} from '../text.service';
+import { ActivatedRoute } from '@angular/router';
+import { TextService } from '../text.service';
 
 @Component({
   selector: 'app-textpage',
@@ -14,14 +14,14 @@ export class TextpageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private service: TextService
-    ) { }
-
-  ngOnInit(
   ) {
+  }
+
+  ngOnInit() {
     this.item = this.route.snapshot.paramMap.get('item');
     this.service.getText().subscribe(content => {
       const self = this;
-      content.forEach(function(element) {
+      content.forEach(function (element) {
         if (element.title === self.item) {
           self.content = element.content;
         }

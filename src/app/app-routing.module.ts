@@ -1,11 +1,11 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {PeopleComponent} from './people/people.component';
-import {PersonDetailsComponent} from './person-details/person-details.component';
-import {EventsComponent} from './events/events.component';
-import {GalleryComponent} from './gallery/gallery.component';
-import {TextpageComponent} from './textpage/textpage.component';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { PeopleComponent } from './people/people.component';
+import { PersonDetailsComponent } from './person-details/person-details.component';
+import { EventsComponent } from './events/events.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { TextpageComponent } from './textpage/textpage.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -18,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, {useHash: true, relativeLinkResolution: 'legacy'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

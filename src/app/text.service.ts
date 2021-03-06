@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {Text} from './Text';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Text } from './Text';
 
 @Injectable({
   providedIn: 'root'
@@ -13,12 +13,13 @@ export class TextService {
 
   constructor(
     private http: HttpClient
-  ) { }
+  ) {
+  }
 
   /**
    * Get text associated with the parameter.
    */
   public getText(): Observable<Text[]> {
-    return this.http.get<Text[]>('text.JSON');
+    return this.http.get<Text[]>('https://villa65.nl/text.JSON');
   }
 }
