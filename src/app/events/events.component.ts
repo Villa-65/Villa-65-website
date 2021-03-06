@@ -23,13 +23,13 @@ export class EventsComponent implements OnInit {
 
   private getTraditions() {
     this.galleryService.getFiles('events/traditions').subscribe(paths => {
-      this.traditionPaths = paths.map((path) => 'https://www.villa65.nl/' + path);
+      this.traditionPaths = paths;
     });
   }
 
   private getTrips() {
     this.galleryService.getFiles('events/trips/thumbs').subscribe(paths => {
-      this.tripsFiles = paths.map((path) => 'https://www.villa65.nl/' + path);
+      this.tripsFiles = paths;
     });
   }
 
