@@ -1,0 +1,19 @@
+.footercontent {
+  padding: 0.2em;
+  display: block;
+  width: 100%;
+}
+
+#author {
+  float: right;
+}
+
+#copyright {
+  float: left;
+}
+
+/*@media (max-width: 350px) {*/
+/*  .footercontent #author{*/
+/*    visibility: hidden;*/
+/*  }*/
+/*}*/
