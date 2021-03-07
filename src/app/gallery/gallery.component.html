@@ -4,7 +4,7 @@
 <div id="pictures">
   <ul>
     <li *ngFor="let file of files">
-      <a [href]="file">
+      <a [href]="'https://villa65.nl/' + file">
         <img src="https://villa65.nl/thumb.php?image={{file}}" alt="{{file}}">
       </a>
     </li>
