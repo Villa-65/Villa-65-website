@@ -1,8 +1,5 @@
 <?php
 define('BASE', realpath(__DIR__));
-// Of als je een niveau omhoog mag:
-// define('BASE', realpath(__DIR__).'/../'));
-
 
 if (empty($_GET['image'])) {
 	// No image was provided, so we exit.
@@ -88,7 +85,7 @@ if (strpos(realpath($image), BASE) !== 0) {
 		if ($func === false) {
 			return;
 		}
-
+		
 		$thumb_file = CACHE_DIR . sha1_file($image) . '.jpg';
 		if (file_exists($thumb_file)) {
 			return $thumb_file;
@@ -118,32 +115,47 @@ if (strpos(realpath($image), BASE) !== 0) {
 		// Generate the thumbnail image.
 		imagecopyresampled($new, $im, 0, 0, $origin_x, $origin_y, THUMB_SIZE, THUMB_SIZE, $size * (THUMB_SIZE / THUMB_SIZE), $size);
 
+        $exif = exif_read_data($image);
+        if(!empty($exif['Orientation'])) {
+            switch($exif['Orientation']) {
+                case 8:
+                    $new = imagerotate($new,90,0);
+                    break;
+                case 3:
+                    $new = imagerotate($new,180,0);
+                    break;
+                case 6:
+                    $new = imagerotate($new,-90,0);
+                    break;
+            }
+        }
+
 		// Store the new thumbnail image.
 		imagejpeg($new, $thumb_file);
 		return $thumb_file;
 	}
 	// basename: /some/../path/image.jpg -> image.jpg. Prevents our script from
 	// accidentally "thumbnailing" files it should not be able to see.
-
+	
     /**
 	 * Directory where our images can be found.
 	 * @var string
 	 */
 	define('IMG_DIR', __DIR__.'/'.str_replace(basename($image), '', $image));
-
+  
 	/**
 	 * Directory where we store cached thumbnails.
 	 * @var string
 	 */
 	define('CACHE_DIR', __DIR__.'/'.str_replace(basename($image), '', $image).'thumbs/');
-
+  
 	// Get the absolute file name of the image.
 	$file = IMG_DIR.basename($image);
-
+	
 	if (!file_exists(CACHE_DIR)) {
 		mkdir(CACHE_DIR);
 	}
-
+  
 	// Generate the thumbnail, or retrieve it from cache.
 	$thumb = image_get_thumbnail($file);
 
