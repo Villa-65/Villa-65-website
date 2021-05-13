@@ -13,8 +13,9 @@ img {
   }
 }
 
-#story {
+.story {
   color: #d0ab29;
+  margin-bottom: 0;
 }
 
 .container {

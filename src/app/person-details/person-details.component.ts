@@ -29,4 +29,8 @@ export class PersonDetailsComponent implements OnInit {
     const personName = this.route.snapshot.paramMap.get('name');
     this.peopleService.getPeople().subscribe(res => this.person = res.find(p => p.name === personName));
   }
+
+  get story(): string[] {
+    return this.person?.story.split('\n');
+  }
 }

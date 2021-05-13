@@ -1,5 +1,5 @@
 <div class="container">
-  <p id="name" class="h3">{{person.name}}</p>
-  <img [src]="'https://villa65.nl/' + person.image" alt="person.image">
-  <p id="story">{{person.story}}</p>
+  <p id="name" class="h3">{{person?.name}}</p>
+  <img [src]="'https://villa65.nl/' + person?.image" alt="person.image">
+  <p class="story" *ngFor="let line of story">{{line}}</p>
 </div>
